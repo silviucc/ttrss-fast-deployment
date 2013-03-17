@@ -1,0 +1,40 @@
+#!/bin/bash
+# This is a simple build script and will be executed on your CI system if 
+# available.  Otherwise it will execute while your application is stopped
+# before the deploy step.  This script gets executed directly, so it
+# could be python, php, ruby, etc.
+
+#!/bin/bash
+# This is a simple build script, place your post-deploy but pre-start commands
+# in this script.  This script gets executed directly, so it could be python,
+# php, ruby, etc.
+
+TMP_DIR=$OPENSHIFT_DATA_DIR/tmp
+LOCK_DIR=$OPENSHIFT_DATA_DIR/lock
+CACHE_DIR=$OPENSHIFT_DATA_DIR/cache
+ICONS_DIR=$OPENSHIFT_DATA_DIR/icons
+
+ln -sf $OPENSHIFT_DATA_DIR/icons $OPENSHIFT_REPO_DIR/php/ico
+if [ ! -d $TMP_DIR ]; then
+    mkdir $TMP_DIR
+fi
+
+if [ ! -d $LOCK_DIR ]; then
+    mkdir $LOCK_DIR
+fi
+
+if [ ! -d $ICONS_DIR ]; then
+    mkdir $ICONS_DIR
+fi
+
+if [ ! -d $CACHE_DIR ]; then
+    mkdir $CACHE_DIR
+fi
+
+if [ ! -d $CACHE_DIR/export ]; then
+    mkdir $CACHE_DIR/export
+fi
+
+if [ ! -d $CACHE_DIR/images ]; then
+    mkdir $CACHE_DIR/images
+fi

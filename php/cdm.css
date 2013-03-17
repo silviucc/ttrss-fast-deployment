@@ -1,0 +1,106 @@
+div.cdmHeader img, div.cdmHeader input, div.cdmFooter img {
+	vertical-align : middle;
+}
+
+div.cdmHeader {
+	display : table;
+}
+
+div.cdmHeader > * {
+	display : table-cell;
+	padding : 5px;
+}
+
+div.cdmHeader > div {
+	white-space : nowrap;
+}
+
+div.cdmHeader > span {
+	width : 100%;
+}
+
+div.cdmHeader span.updated {
+	color : gray;
+	font-weight : normal;
+}
+
+div.cdmHeader input {
+	margin-right : 5px;
+}
+
+div.cdmHeader div.updPic {
+	width : 25px;
+	display : inline-block;
+	text-align : center;
+}
+
+div.cdmHeader div.updPic img {
+	vertical-align : middle;
+}
+
+div.cdmHeader img, div.cdmFooter img {
+	margin : 0px 2px 0px 2px;
+}
+
+div.cdmContent, div.cdmContentInner * {
+	font-weight : normal;
+}
+
+div.cdmContent a {
+	color : #4684ff;
+}
+
+div.cdmContent a:hover {
+	color : black;
+}
+
+div.cdmContentInner {
+	margin : 0px 10px 10px 10px;
+}
+
+div.cdmContentInner img {
+	border-width : 0px;
+	max-width : 98%;
+}
+
+div.cdmFooter {
+	background : #f9f9f9;
+	padding : 5px;
+	font-weight : normal;
+	color : gray;
+	clear : both;
+}
+
+.Selected div.cdmFooter {
+	background-color : #FFF2BF;
+}
+
+span.cdmExcerpt {
+	font-size : 11px;
+	color : gray;
+	font-weight : normal;
+	cursor : pointer;
+}
+
+div.cdmContent div.postEnclosures {
+	margin-top : 1em;
+	color : gray;
+}
+
+div.cdmFeedTitle {
+	border-color : #a0a0a0;
+	border-width : 0px 0px 1px 0px;
+	border-style : solid;
+	padding : 5px 3px 5px 5px;
+	background : url("images/toolbar.png") bottom left;
+	background-repeat : repeat-x;
+}
+
+div.articleNote {
+	border-style : dashed none dashed none;
+}
+
+div.cdmHeader span.hlFeed {
+	float : right;
+	font-weight : normal;
+}
