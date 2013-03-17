@@ -13,10 +13,15 @@ TMP_DIR=$OPENSHIFT_DATA_DIR/tmp
 LOCK_DIR=$OPENSHIFT_DATA_DIR/lock
 CACHE_DIR=$OPENSHIFT_DATA_DIR/cache
 ICONS_DIR=$OPENSHIFT_DATA_DIR/icons
+LOG_DIR=$OPENSHIFT_DATA_DIR/logs
 
 ln -sf $OPENSHIFT_DATA_DIR/icons $OPENSHIFT_REPO_DIR/php/ico
 if [ ! -d $TMP_DIR ]; then
     mkdir $TMP_DIR
+fi
+
+if [ ! -d $LOG_DIR ]; then
+    mkdir $LOG_DIR
 fi
 
 if [ ! -d $LOCK_DIR ]; then
