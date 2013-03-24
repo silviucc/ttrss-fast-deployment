@@ -4,4 +4,5 @@
 # it could be python, php, ruby, etc.
 
 if [ -f $OPENSHIFT_DATA_DIR/.schema_deployed ]; then exit 0; fi
-psql -h$OPENSHIFT_POSTGRESQL_DB_HOST -U$OPENSHIFT_POSTGRESQL_DB_USERNAME $WOPENSHIFT_POSTGRESQL_DB_PASSWORD -f$OPENSHIFT_REPO_DIR/php/schema/ttrss_schema_pgsql.sql $OPENSHIFT_APP_NAME && touch $OPENSHIFT_DATA_DIR/.schema_deployed
+set PGPASSWORD=$OPENSHIFT_POSTGRESQL_DB_PASSWORD
+psql -h$OPENSHIFT_POSTGRESQL_DB_HOST -U$OPENSHIFT_POSTGRESQL_DB_USERNAME -f$OPENSHIFT_REPO_DIR/php/schema/ttrss_schema_pgsql.sql $OPENSHIFT_APP_NAME && touch $OPENSHIFT_DATA_DIR/.schema_deployed
